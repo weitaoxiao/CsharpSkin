@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Client.UI.Base.Forms.FormBase">
+    <Position X="3.25" Y="2.5" Width="5.25" />
+    <NestedTypes>
+      <Delegate Name="Client.UI.Base.Forms.FormBase.BackEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Forms\Class1.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="Client.UI.Base.Forms.FormBase.SysBottomEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Forms\Class1.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>D/WM+jApI4RtOUo6U0pYvYsTVXrBKxTut0T5yYOuPEI=</HashCode>
+      <FileName>Forms\FormBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>
