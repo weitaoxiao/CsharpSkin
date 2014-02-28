@@ -999,7 +999,7 @@ namespace Client.UI.Base.Forms
             }
         }
 
-        //[Category("SysButton"), DesignerSerializationVisibility(DesignerSerializationVisibility.Content), Description("自定义系统按钮集合的项")]
+        [Category("SysButton"), DesignerSerializationVisibility(DesignerSerializationVisibility.Content), Description("自定义系统按钮集合的项")]
         public CustomSysButtonCollection SysButtonItems
         {
             get
