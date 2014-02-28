@@ -9,6 +9,8 @@ namespace Client.Core.Win32
     /// </summary>
     public enum WindowsMessage : int
     {
+        
+
         /// <summary>
         /// 
         /// </summary>
@@ -836,6 +838,15 @@ namespace Client.Core.Win32
 
         SC_MAXIMIZE = 0xF030, //最大化
 
-        SC_RESTORE = 0xF120  //还原
+        SC_RESTORE = 0xF120,  //还原
+
+        #region Messages
+        WM_NCMOUSELEAVE = 0x2a2,
+        WM_XBUTTONDOWN = 0x20b,
+        WM_DWMCOMPOSITIONCHANGED = 0x31e,
+        WM_NCUAHDRAWFRAME = 0xaf,
+        WM_POPUPSYSTEMMENU = 0x313,
+        WM_STYLECHANGED = 0x7d,
+        #endregion
     }
 }

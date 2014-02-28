@@ -39,7 +39,7 @@ namespace Client.UI.Base.Forms
         private bool _canResize = true;
         private bool _active;
         private bool _inPosChanged;
-        //private bool _sysBottomVisibale;
+
         private bool _backToColor = true;
         private bool _special = true;
         private bool _inheritBack;
@@ -62,18 +62,12 @@ namespace Client.UI.Base.Forms
         private Image _restoreDownBack;
         private Image _restoreMouseBack;
         private Image _restoreNormlBack;
-        //private Image _sysBottomDown;
-        //private Image _sysBottomMouse;
-        //private Image _sysBottomNorml;
-
-
-
 
         private RoundStyle _roundStyle = RoundStyle.All;
         private Size _maxBoxSize = new Size(32, 18);
         private Size _minBoxiSize = new Size(32, 18);
         private Size _closeBoxSize = new Size(32, 18);
-        //private Size _sysBottomSize = new Size(28, 20);
+
         private Point _controlBoxOffset = new Point(6, 0);
         private Color _titleColor = Color.Black;
         private Point _titleOffset = new Point(0, 0);
@@ -1005,7 +999,7 @@ namespace Client.UI.Base.Forms
             }
         }
 
-        [Category("SysButton"), DesignerSerializationVisibility(DesignerSerializationVisibility.Content), Description("自定义系统按钮集合的项")]
+        //[Category("SysButton"), DesignerSerializationVisibility(DesignerSerializationVisibility.Content), Description("自定义系统按钮集合的项")]
         public CustomSysButtonCollection SysButtonItems
         {
             get
@@ -1431,19 +1425,6 @@ namespace Client.UI.Base.Forms
 
         protected override void OnMouseDoubleClick(MouseEventArgs e)
         {
-            //if ((e.Button == MouseButtons.Left) && base.MaximizeBox)
-            //{
-            //    if (this.Mobile == MobileStyle.Mobile)
-            //    {
-            //        base.WindowState = (base.WindowState == FormWindowState.Maximized) ? FormWindowState.Normal : FormWindowState.Maximized;
-            //    }
-            //    else if ((this.Mobile == MobileStyle.TitleMobile) && (e.Y < this.CaptionHeight))
-            //    {
-            //        base.WindowState = (base.WindowState == FormWindowState.Maximized) ? FormWindowState.Normal : FormWindowState.Maximized;
-            //    }
-            //}
-            //base.OnMouseDoubleClick(e);
-
             if (e.Button == MouseButtons.Left && this.MaximizeBox)
             {
                 bool flag = true;
@@ -1802,30 +1783,30 @@ namespace Client.UI.Base.Forms
         {
             switch (m.Msg)
             {
-                case 0x24:
+                case (int)WindowsMessage.WM_GETMINMAXINFO:
                     this.WmGetMinMaxInfo(ref m);
                     return;
 
-                case 0x47:
+                case (int)WindowsMessage.WM_WINDOWPOSCHANGED:
                     this.WmWindowPosChanged(ref m);
                     return;
 
-                case 0x83:
+                case (int)WindowsMessage.WM_NCCALCSIZE:
                     this.WmNcCalcSize(ref m);
                     return;
 
-                case 0x84:
+                case (int)WindowsMessage.WM_NCHITTEST:
                     this.WmNcHitTest(ref m);
                     return;
 
-                case 0x85:
+                case (int)WindowsMessage.WM_NCPAINT:
                     break;
 
-                case 0x86:
+                case (int)WindowsMessage.WM_NCACTIVATE:
                     this.WmNcActive(ref m);
                     return;
 
-                case 0xa5:
+                case (int)WindowsMessage.WM_NCRBUTTONUP:
                     this.WmNcRButtonUp(ref m);
                     return;
 
